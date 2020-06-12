@@ -1,0 +1,71 @@
+variables:
+  AZ_USERNAME: mckinsey_alivia@wistron.com
+  AZ_PASSWORD: G4fAb8Y!06
+  AZ_SUBSCRIPTION_ID: 185eedc7-5b46-4c47-9d27-2a9d22da80e8
+  RG_NAME_DEV: WSD_SSOT_DEV
+  AS_NAME_DEV: WSDSSOT-AP-DEV
+  RG_NAME_PRD: WSD_SSOT_PRD
+  AS_NAME_PRD: WSDSSOT-AP-PRD
+  BACKEND_URL_DEV: wsdssot-ap-dev-linux.azurewebsites.net
+  BACKEND_URL_PRD: wsdssot-ap-prd-linux-backend.azurewebsites.net
+
+stages:
+  - dev:deploy
+  - dev:test
+  - prd:deploy
+  - prd:test
+
+# 佈署
+dev:deploy:
+  image: node:10.16
+  stage: dev:deploy
+  only:
+    - master
+  dependencies: []
+  variables:
+    AZ_RESOURCE_GRP: $RG_NAME_DEV
+    AZ_APP_SERVICE: $AS_NAME_DEV
+  script:
+    - echo "update web (DEV)"
+    - apt-get update
+    - apt-get install zip
+    - curl -sL https://aka.ms/InstallAzureCLIDeb | bash
+    # - sed -i "s,http://127.0.0.1:8000,https://${BACKEND_URL_DEV},g" ./src/config.env.json
+    # - cat ./src/config.env.json
+    - npm cache clean --force
+    - npm install
+    - npm run build:dev
+    - cp ./web.config ./build
+    - cd build && zip -r AppFiles.zip *
+    - az login -u ${AZ_USERNAME} -p ${AZ_PASSWORD}
+    - az account set --subscription ${AZ_SUBSCRIPTION_ID}
+    - az webapp deployment source config-zip --resource-group ${AZ_RESOURCE_GRP} --name ${AZ_APP_SERVICE} --src AppFiles.zip
+  tags:
+    - runner-chris
+
+prd:deploy:
+  image: node:10.16
+  stage: prd:deploy
+  only:
+    - release-prd
+  dependencies: []
+  variables:
+    AZ_RESOURCE_GRP: $RG_NAME_PRD
+    AZ_APP_SERVICE: $AS_NAME_PRD
+  script:
+    - echo "update web (PRD)"
+    - apt-get update
+    - apt-get install zip
+    - curl -sL https://aka.ms/InstallAzureCLIDeb | bash
+    # - sed -i "s,http://127.0.0.1:8000,https://${BACKEND_URL_PRD},g" ./src/config.env.json
+    # - cat ./src/config.env.json
+    - npm cache clean --force
+    - npm install
+    - npm run build:prod
+    - cp ./web.config ./build
+    - cd build && zip -r AppFiles.zip *
+    - az login -u ${AZ_USERNAME} -p ${AZ_PASSWORD}
+    - az account set --subscription ${AZ_SUBSCRIPTION_ID}
+    - az webapp deployment source config-zip --resource-group ${AZ_RESOURCE_GRP} --name ${AZ_APP_SERVICE} --src AppFiles.zip
+  tags:
+    - runner-chris

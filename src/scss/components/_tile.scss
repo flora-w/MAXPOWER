@@ -1,0 +1,12 @@
+.tile {
+  &.selected {
+    background-color: gray;
+  }
+}
+
+.tile-corner {
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

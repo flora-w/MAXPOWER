@@ -1,0 +1,40 @@
+.app-sider {
+  display: flex;
+  flex-direction: column;
+  min-width: 225px !important;
+  max-width: 225px !important;
+  width: 225px !important;
+  z-index: 99;
+  height: 100vh;
+  justify-content: stretch;
+  align-items: stretch;
+
+  .ant-layout-sider-children {
+    position: fixed;
+    background-color: $color-background-highlight;
+    width: 225px;
+    border-right: 2px $color-border solid;
+    transition: all 0.2s;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .ant-layout-sider-trigger {
+    width: 225px !important;
+    background-color: transparent;
+  }
+
+  &.collapsed {
+    min-width: 80px !important;
+    max-width: 80px !important;
+    width: 80px !important;
+
+    .ant-layout-sider-children {
+      width: 80px !important;
+    }
+
+    .ant-layout-sider-trigger {
+      width: 80px !important;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+.ant-select {
+  color: $color-text;
+  min-width: 60px;
+}
+
+.ant-select-selection {
+  background-color: $color-background;
+  border: 1px white solid;
+color-bord
+  &:hover{
+    border-color: $color-success;
+  }
+
+  &:focus {
+    border-color: $color-success;
+  }
+}
+
+.ant-select-open .ant-select-selection {
+  border-color:  $color-success;
+}
+
+.ant-select-selection--multiple .ant-select-selection__choice {
+  background-color: $color-background-highlight;
+  color: $color-text;
+  border: none;
+
+  .ant-select-selection__choice__remove {
+    color: $color-text;
+  }
+}
+
+.ant-select-arrow-icon {
+  color: $color-text-dark;
+}
+
+.ant-select-dropdown {
+  background-color: $color-background;
+}
+
+.ant-select-dropdown-menu-item-selected {
+  background-color: $color-background-color-menu-item-active;
+  color: $color-text;
+  font-weight: normal;
+}
+
+.ant-select-dropdown-menu-item {
+  background-color: $color-background-color-menu-item;
+  color: $color-menu-item-text;
+
+  &:hover:not(.ant-select-dropdown-menu-item-disabled) {
+    background-color: $color-background-color-menu-item-active;
+    color: $color-text;
+  }
+}
+
+.ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
+  background-color: $color-background-color-menu-item-active;
+  color: $color-text;
+}
+
+.ant-select-tree {
+  background-color: $color-background-color-menu-item;
+  color: $color-text;
+}
+
+.ant-select-tree-treenode-switcher-close ant-select-tree-treenode-selected {
+  background-color: $color-background-color-menu-item-active;
+    color: $color-text;
+}
+
+.ant-select-tree li .ant-select-tree-node-content-wrapper {
+  color: $color-menu-item-text;
+
+  &.ant-select-tree-node-selected {
+    background-color: $color-background-color-menu-item-active;
+    color: $color-text;
+  }
+
+  &.ant-select-tree-node-content-wrapper:hover {
+    background-color: $color-background-color-menu-item-active;
+    color: $color-text;
+  }
+}

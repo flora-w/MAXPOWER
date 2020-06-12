@@ -1,0 +1,93 @@
+{
+  "result": {
+    "succeed": true,
+    "code": "0000",
+    "msg": "OK"
+  },
+  "data": {
+    "kpi_achieved": {
+      "series_name": [
+        "Hokkaido",
+        "Kyushu",
+        "Shikoku"
+      ],
+      "series_code": [
+        "Hokkaido",
+        "Kyushu",
+        "Shikoku"
+      ],
+      "series_type": ["Volume", "Volume", "Volume"],
+      "series_data": {
+        "abs": {
+          "Hokkaido": {
+              "value1": 85385637
+          },
+          "Kyushu": {
+              "value1": 19199080
+          },
+          "Shikoku": {
+              "value1": 74027876
+          }
+        }
+      }
+    },
+    "time_series": {
+      "series_name": [
+        "Hokkaido",
+        "Kyushu",
+        "Shikoku"
+      ],
+      "series_code": [
+        "Hokkaido",
+        "Kyushu",
+        "Shikoku"
+      ],
+      "series_type": ["Volume", "Volume", "Volume"],
+      "series_time": ["2018/09"],
+      "series_data": {
+        "Hokkaido": 85385637,
+        "Kyushu": 19199080,
+        "Shikoku": 74027876
+      }
+    },
+    "quarter_series": {
+      "series_name": [
+        "Hokkaido",
+        "Kyushu"
+      ],
+      "series_code": [
+        "Hokkaido",
+        "Kyushu"
+      ],
+      "series_type": ["Volume"],
+      "series_time": ["2018/09","2018/10","2018/11"],
+      "series_data": {      
+          "Hokkaido": 
+          {
+            "test1":[85385637.2,44545446,78543884],
+            "test2":[11111122,232211234,97666554] 
+          
+          }    
+      }
+    },
+    "table_data": {
+      "series_name": [
+        "Hokkaido",
+        "Kyushu",
+        "Shikoku"
+      ],
+      "series_code": [
+        "Hokkaido",
+        "Kyushu",
+        "Shikoku"
+      ],
+      "series_type": ["Volume", "Volume", "Volume"],
+      "series_time": ["2018/09"],
+      "series_data": {
+        "Hokkaido": 85385637,
+        "Kyushu": 19199080,
+        "Shikoku": 74027876
+      }
+    }
+  }
+}

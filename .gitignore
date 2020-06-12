@@ -1,0 +1,17 @@
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+/.idea
+
+# misc
+*.iml
+.editorconfig
+.DS_Store
+*.zip
+
+package-lock.json

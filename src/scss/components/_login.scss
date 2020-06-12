@@ -1,0 +1,146 @@
+.login {
+  background: url('/images/login-page.jpg') no-repeat center center fixed;
+  background-size: contain;
+  height: 100vh;
+  font-size: 10px;
+
+  @include screen-2560 {
+    font-size: 13.33px;
+  }
+
+  #login_box{
+    // display: flex;
+    position: fixed;
+    top: 45%;
+    left: 55%;
+    margin: -16em 0 0 -32em;
+    height:35em;
+    box-shadow: -0.2em 0.2em 1em 0 rgba(0,0,0,0.50);
+    animation: fadein 2s;
+  }
+
+  #news{
+    color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 40.5em;
+    background: rgba(255,255,255,0.8);
+    padding: 2.5em 2em 2.5em 4em;
+
+    .logo {
+      height: 3em;
+      margin-right: 1.2em;
+    }
+
+    .today-container {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 1.4em;
+    }
+
+   }
+  
+  #tab{
+    width: 50em;
+    background: rgba(0,0,0,0.80);
+    padding: 1em 1em 0 2em;
+
+    .radio{
+      padding: 1.5em 0 2em 0;
+    }
+   }
+
+  #login{
+    display: flex;
+    height: 100%;
+    width: 50em;
+    background: rgba(0,0,0,0.80);
+    padding: 1.5em 0 2em 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .user-icon {
+      height: 8.5em;
+      width: 8.5em;
+    }
+
+    .login-button {
+      display: flex;
+      width: 12em;
+      transform: translate(0, 2em);
+      font-size: 1.2em;
+
+      .azure-icon {
+        height: 1.5em;
+        width: 1.5em;
+        margin-right: 2em;
+      }
+    }
+  }
+
+  #end_bar{
+    position:absolute;
+    bottom:0;
+    height:3.2em;
+    width:100%;
+    background: rgba(0,0,0,0.80);
+  }
+
+  #photo_desc{
+    bottom: 3.8em;
+    color: #8a8a8a;
+    font-size: 1em;
+    position: absolute;
+    right: 1.5em;
+  }
+
+  .input_name {
+    box-shadow: none;
+    border: none;
+    line-height: middle;
+  }
+  .input_pwd {
+    box-shadow: none;
+    border: none;
+    line-height: initial;
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  ::-webkit-input-placeholder { /* Chrome */
+    color: #F0F0F0;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: #F0F0F0;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: #F0F0F0;
+    opacity: 1;
+  }
+  :-moz-placeholder { /* Firefox 4 - 18 */
+    color: #F0F0F0;
+    opacity: 1;
+  }
+
+  .hover_white:hover {
+    color: #F0F0F0;
+  }
+
+  #login_button {
+    background: none;
+  }
+  #login_button:active {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+}

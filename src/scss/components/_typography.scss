@@ -1,0 +1,176 @@
+.base-margin {
+  margin: $base-space !important;
+}
+
+.base-margin-top {
+  margin-top: $base-space !important;
+}
+
+.base-margin-bottom {
+  margin-bottom: $base-space !important;
+}
+
+.base-margin-left {
+  margin-left: $base-space !important;
+}
+
+.base-margin-right {
+  margin-right: $base-space !important;
+}
+
+.base-padding {
+  padding: $base-space !important;
+}
+
+.base-padding-top {
+  padding-top: $base-space !important;
+}
+
+.base-padding-bottom {
+  padding-bottom: $base-space !important;
+}
+
+.base-padding-left {
+  padding-left: $base-space !important;
+}
+
+.base-padding-right {
+  padding-right: $base-space !important;
+}
+
+.half-margin {
+  margin: $half-space !important;
+}
+
+.half-margin-top {
+  margin-top: $half-space !important;
+}
+
+.half-margin-bottom {
+  margin-bottom: $half-space !important;
+}
+
+.half-margin-left {
+  margin-left: $half-space !important;
+}
+
+.half-margin-right {
+  margin-right: $half-space !important;
+}
+
+.half-padding {
+  padding: $half-space !important;
+}
+
+.half-padding-top {
+  padding-top: $half-space !important;
+}
+
+.half-padding-bottom {
+  padding-bottom: $half-space !important;
+}
+
+.half-padding-left {
+  padding-left: $half-space !important;
+}
+
+.half-padding-right {
+  padding-right: $half-space !important;
+}
+
+
+.dbl-margin {
+  margin: $dbl-space !important;
+}
+
+.dbl-margin-top {
+  margin-top: $dbl-space !important;
+}
+
+.dbl-margin-bottom {
+  margin-bottom: $dbl-space !important;
+}
+
+.dbl-margin-left {
+  margin-left: $dbl-space !important;
+}
+
+.dbl-margin-right {
+  margin-right: $dbl-space !important;
+}
+
+.dbl-padding {
+  padding: $dbl-space !important;
+}
+
+.dbl-padding-top {
+  padding-top: $dbl-space !important;
+}
+
+.dbl-padding-bottom {
+  padding-bottom: $dbl-space !important;
+}
+
+.dbl-padding-left {
+  padding-left: $dbl-space !important;
+}
+
+.dbl-padding-right {
+  padding-right: $dbl-space !important;
+}
+
+.half-height {
+  height: $half-space !important;
+}
+
+.base-height {
+  height: $base-space !important;
+}
+
+.dbl-height {
+  height: $dbl-space !important;
+}
+
+.tpl-height {
+  height: $tpl-space !important;
+}
+
+.qdpl-height {
+  height: $qdpl-space !important;
+}
+
+.half-width {
+  width: $half-space !important;
+}
+
+.base-width {
+  width: $base-space !important;
+}
+
+.dbl-width {
+  width: $dbl-space !important;
+}
+
+.tpl-width {
+  width: $tpl-space !important;
+}
+
+.qdpl-width {
+  width: $qdpl-space !important;
+}
+
+
+@for $i from 1 through 10 {
+  .z-index-#{$i} {
+    z-index: #{$i};
+  }
+}
+
+.pull-right {
+  float: right;
+}
+
+.border {
+  border: 2px $color-border solid;
+  border-radius: 3px;
+}

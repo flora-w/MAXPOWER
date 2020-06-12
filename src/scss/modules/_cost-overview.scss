@@ -1,0 +1,178 @@
+.cost-kpi-board {
+  padding: $base-space $half-space $base-space $base-space;
+  background-color: $color-background-light;
+  border-radius:10px;
+  min-height: 144px;
+
+  :hover {
+    cursor: pointer;
+  }
+
+  &.L101 {
+    border-top: 3px solid $color-red;
+  }
+
+  &.L102 {
+    border-top: 3px solid $color-orange;
+  }
+
+  &.L103 {
+    border-top: 3px solid $color-green;
+  }
+
+  &.L104 {
+    border-top: 3px solid $color-blue;
+  }
+
+  &.L105 {
+    border-top: 3px solid $color-purple;
+  }
+
+  .cost-kpi-board-name {
+    font-size: 20px;
+    margin-bottom: 0;
+    color: $color-green;
+
+    &.actual {
+      color: $color-actual;
+    }
+
+    &.gap {
+      color: $color-gap;
+    }
+
+    &.budget {
+      color: $color-budget;
+    }
+
+    &.r3m {
+      color: $color-r3m;
+    }
+
+    &.history {
+      color: $color-history;
+    }
+
+  }
+
+  .cost-kpi-board-statistics {
+    font-size: 24px;
+    margin-right: $half-space;
+  }
+}
+
+.cost-kpi-board-title-container {
+  height: 3em;
+}
+
+.cost-backgroud-container {
+  position: absolute;
+  height: 320px;
+  width: 100%;
+}
+
+.cost-bar-background {
+  height: 95%;
+  display: inline-block;
+  position: relative;
+
+  .checked-arrow {
+    width: 0px;
+    height: 0px;
+    border: 15px solid transparent;
+    border-top: 3px solid $color-red;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  &.checked {
+    background-color: $color-background-highlight;
+
+    &.red {
+      border-bottom: 3px solid $color-red;
+      .checked-arrow {
+        border-top:15px solid $color-red;
+      }
+    }
+
+    &.green {
+      border-bottom: 3px solid $color-green;
+      .checked-arrow {
+        border-top:15px solid $color-green;
+      }
+    }
+
+    &.blue {
+      border-bottom: 3px solid $color-blue;
+      .checked-arrow {
+        border-top:15px solid $color-blue;
+      }
+    }
+
+    &.yellow {
+      border-bottom: 3px solid $color-yellow;
+      .checked-arrow {
+        border-top:15px solid $color-yellow;
+      }
+    }
+
+    &.orange {
+      border-bottom: 3px solid $color-orange;
+      .checked-arrow {
+        border-top:15px solid $color-orange;
+      }
+    }
+
+    &.grey {
+      border-bottom: 3px solid $color-grey;
+      .checked-arrow {
+        border-top:15px solid $color-grey;
+      }
+    }
+
+    &.purple {
+      border-bottom: 3px solid $color-purple;
+      .checked-arrow {
+        border-top:15px solid $color-purple;
+      }
+    }
+  }
+}
+
+.cost-kpi-board-divider {
+  border-bottom: 1px solid $color-text-dark;
+}
+
+.cost-unit-gap-title-botton {
+  margin-right: $base-space;
+
+  .ant-radio-button-wrapper {
+    border-radius: 4px;
+  }
+}
+
+.cost-detail {
+  .ant-table-column-title {
+    color: $color-text;
+  }
+
+  .ant-table-tbody > tr {
+    pointer-events: none;
+  }
+
+  .show-invoice {
+    .ant-table-thead > tr:first-child > th:nth-child(3) {
+      background-color: $color-background-highlight;
+    }
+
+    .ant-table-thead > tr:nth-child(2) > th:nth-child(4), th:nth-child(5), th:nth-child(6) {
+      background-color: $color-background-highlight;
+    }
+
+    .ant-table-tbody > tr > td:nth-child(5), td:nth-child(6), td:nth-child(7) {
+      background-color: $color-background-highlight;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.ant-checkbox-group-item {
+  color: $color-text;
+}
+
+.ant-checkbox-inner {
+  background-color: $color-background-light;
+  border: 1px solid $color-background-highlight;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: $color-success;
+}

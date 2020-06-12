@@ -1,0 +1,16 @@
+.ant-card {
+  color: $color-text-dark;
+  background-color: $color-background-light;
+
+  &.selected {
+      .ant-card-body, .ant-statistic{
+        .ant-statistic-title {
+          color: $color-text !important;
+          font-weight: bold;
+      }
+      .ant-statistic-content, .ant-statistic-content-value, span {
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,329 @@
+.performance-board {
+  height: 272px;
+
+  .board-button {
+    height: 49px;
+    border-radius: 6px;
+    margin: $base-space 0 $base-space $base-space;
+    padding: 0 $dbl-space;
+    background-color: $color-background-light;
+
+    &.selected {
+      border: 1px solid $color-success;
+      background-color: $color-background-highlight;
+    }
+
+    :hover {
+      cursor: pointer;
+    }
+
+    .board-button-title {
+      font-size: 18px;
+      margin-right: $base-space;
+    }
+
+    .board-button-desc {
+      color: $color-menu-item-text;
+    }
+
+    .board-button-value {
+      text-align: right;
+
+      .ant-statistic-content{
+        padding: 0;
+      }
+    }
+  }
+}
+
+.board-panel {
+  height: 242px;
+  border-radius: 10px;
+  margin: $base-space $base-space $base-space 0;
+  padding: $base-space $dbl-space;
+  background-color: $color-background-light;
+  text-align: center;
+
+  .board-panel-title {
+    font-size: 18px;
+    margin-right: $half-space;
+  }
+
+  .board-panel-subtitle {
+    color: $color-menu-item-text;
+  }
+
+  .board-panel-bottom-wrapper {
+    display: flex;
+    align-items: center;
+    transform: translate(0, -12px);
+
+    .board-panel-value {
+      margin: 0;
+      font-weight: bold;
+      text-align: center;
+
+      .ant-statistic-content {
+        padding: 0;
+        font-size: 48px;
+      }
+    }
+
+    .board-panel-benchmark {
+      display: inline-block;
+      text-align: center;
+
+      .ant-statistic-content {
+        padding: 0;
+      }
+
+      .ant-statistic-content-value-decimal {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+
+.progress-label-value {
+  font-size: 24px;
+  color: $color-text;
+  margin: $base-space 0 0;
+}
+
+.progress-label-desc {
+  color: $color-text-dark;
+  font-size: 14px;
+}
+
+.performance-alert-container {
+  background-color: $color-background-light;
+  padding: $half-space $half-space $half-space $base-space;
+  height: 250px;
+  border-radius: 10px;
+  overflow-y: auto;
+  color: $color-text;
+
+  &.green{
+    border-top: 3px solid $color-green;
+  }
+
+  &.purple {
+    border-top: 3px solid $color-purple;
+  }
+
+  &.green {
+    border-top: 3px solid $color-green;
+  }
+
+  &.blue {
+    border-top: 3px solid $color-blue;
+  }
+
+  &.yellow {
+    border-top: 3px solid $color-yellow;
+  }
+
+  &.orange {
+    border-top: 3px solid $color-orange;
+  }
+
+  &.grey {
+    border-top: 3px solid $color-grey;
+  }
+
+  &.red {
+    border-top: 3px solid $color-red;
+  }
+
+  &.brown {
+    border-top: 3px solid $color-brown;
+  }
+
+  .performance-alert-front {
+    padding: $base-space;
+
+    .performance-alert-title {
+      font-size: 16px;
+    }
+  }
+
+  &.back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .performance-alert-back {
+      padding: $half-space 0;
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .performance-alert-ops-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .performance-alert-ops {
+        background-color: $color-background-highlight;
+        padding: $half-space/2 $half-space $half-space;
+        margin: $half-space/2;
+        border-radius: 6px;
+        height: 28px;
+        width: 28;
+
+        :hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.performance-alerts {
+  margin: 0 !important;
+  padding: $base-space !important;
+  height: 45vh;
+  overflow-y: scroll;
+  border: 1px solid $color-border;
+  border-radius: 6px;
+}
+
+.profitability-button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .btn {
+    display: flex;
+    width: auto;
+    padding: 6px 12px;
+    border: 1px solid $color-success;
+    border-radius: 4px;
+    background-color: $color-background-color-menu-item;
+    font-size: 12px;
+    cursor: pointer;
+  }
+}
+
+.bar-backgroud-container {
+  position: absolute;
+  height: 300px;
+  width: 100%;
+}
+
+.bar-background {
+  width: 14.28%;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+
+  &.bars_7 {
+    width: 14.28%;
+  };
+
+  &.bars_6 {
+    width: 16.66%;
+  }
+
+  &.bars_5 {
+    width: 20%;
+  }
+
+  &.bars_4 {
+    width: 25%;
+  }
+
+  &.bars_3 {
+    width: 33.33%;
+  }
+
+  &.bars_2 {
+    width: 50%;
+  }
+
+  &.bars_1 {
+    width: 100%;
+  }
+
+  .checked-arrow {
+    width:0px;
+    height:0px;
+    border:25px solid transparent;
+    border-top:15px solid $color-red;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  &.checked {
+    background-color: $color-background-highlight;
+
+    &.red {
+      border-bottom: 3px solid $color-red;
+      .checked-arrow {
+        border-top:15px solid $color-red;
+      }
+    }
+
+    &.green {
+      border-bottom: 3px solid $color-green;
+      .checked-arrow {
+        border-top:15px solid $color-green;
+      }
+    }
+
+    &.blue {
+      border-bottom: 3px solid $color-blue;
+      .checked-arrow {
+        border-top:15px solid $color-blue;
+      }
+    }
+
+    &.yellow {
+      border-bottom: 3px solid $color-yellow;
+      .checked-arrow {
+        border-top:15px solid $color-yellow;
+      }
+    }
+
+    &.orange {
+      border-bottom: 3px solid $color-orange;
+      .checked-arrow {
+        border-top:15px solid $color-orange;
+      }
+    }
+
+    &.grey {
+      border-bottom: 3px solid $color-grey;
+      .checked-arrow {
+        border-top:15px solid $color-grey;
+      }
+    }
+
+    &.purple {
+      border-bottom: 3px solid $color-purple;
+      .checked-arrow {
+        border-top:15px solid $color-purple;
+      }
+    }
+
+    &.brown {
+      border-bottom: 3px solid $color-brown;
+      .checked-arrow {
+        border-top:15px solid $color-brown;
+      }
+    }
+  }
+}
+
+.performance-structure-table {
+  .ant-table {
+    tbody > tr > td {
+      padding: 0;
+    }
+  }
+}

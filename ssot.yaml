@@ -1,0 +1,440 @@
+openapi: 3.0.0
+# Added by API Auto Mocking Plugin
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/myself26/Wistron_SSOT/1.0.0
+info:
+  version: "1.0.0"
+  title: Wistron SSOT
+  
+tags:
+- name: BU 
+  description: info
+- name: overview
+  description: kpi overview
+- name: cost
+  description: cost x-ray
+    
+paths:
+  /bu/{bu}:
+    get:
+      tags:
+        - BU
+      summary: Fetch basic info by bu name
+      description: Returns bu's info
+      parameters:
+        - in: path
+          name: bu
+          description: name of bu to return
+          required: true
+          schema:
+            $ref: '#/components/schemas/BuName'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BU'
+        '404':
+          description: Bu not found
+        
+  /bu/{bu}/overview/kpi:
+    get:
+      tags:
+        - overview
+      summary: Fetch kpi overview information by bu name
+      description: Returns bu's kpi values and trend
+      parameters:
+        - in: path
+          name: bu
+          description: name of bu to return
+          required: true
+          schema:
+            $ref: '#/components/schemas/BuName'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KPI'
+        '404':
+          description: Bu not found
+  /bu/{bu}/overview/health:
+    get:
+      tags:
+        - overview
+      summary: Fetch project health information by bu name
+      description: Returns bu projects' health status
+      parameters:
+        - in: path
+          name: bu
+          description: name of bu to return
+          required: true
+          schema:
+            $ref: '#/components/schemas/BuName'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Health'
+        '404':
+          description: Bu not found
+  /bu/{bu}/overview/fulfillment:
+    get:
+      tags:
+        - overview
+      summary: Fetch alert by bu name
+      description: Returns bu projects' shipment and production data
+      parameters:
+        - in: path
+          name: bu
+          description: name of bu to return
+          required: true
+          schema:
+            $ref: '#/components/schemas/BuName'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Fulfillment'
+        '404':
+          description: Bu not found
+  /bu/{bu}/cost/moh:
+    get:
+      tags:
+        - cost
+      summary: Fetch MOH by bu name
+      description: Returns bu projects' MOH data
+      parameters:
+        - in: path
+          name: bu
+          description: name of bu to return
+          required: true
+          schema:
+            $ref: '#/components/schemas/BuName'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MOH'
+        '404':
+          description: Bu not found
+  /bu/{bu}/cost/muv:
+    get:
+      tags:
+        - cost
+      summary: Fetch MOH by bu name
+      description: Returns bu projects' MOH data
+      parameters:
+        - in: path
+          name: bu
+          description: name of bu to return
+          required: true
+          schema:
+            $ref: '#/components/schemas/BuName'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MUV'
+        '404':
+          description: Bu not found
+        
+components:
+  schemas:    
+    BuName:
+      type: string
+      enum:
+        - SGDB
+        - CSBG
+        - SABU
+        - CBG
+    PrjName:
+      type: string
+      enum:
+       - Artemis
+       - Mercury
+       - Apollo
+       - Avatar
+       - New19
+       - Clover
+       - Opal
+       - Karma
+       - Hampi
+        
+    BU:
+      type: object
+      properties:
+        projects:
+          type: array
+          items: 
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+          description: |
+            (id, name) pairs of all projects produced by required BU
+        prj_struct:
+          type: object
+          description: |
+            an object illustrating bgbu/plant/project structure, leaf nodes being an array of projects, other nodes standing for bgbu or plant
+        current_period:
+          type: string
+          format: date
+          description: |
+            Reporting Period
+        current_date:
+          type: string
+          format: date
+          description: |
+            As of date for fulfillment
+        
+    KPI:
+      type: object
+      properties:
+        kpi_values:
+          type: object
+          properties:
+            rev:
+              type: number
+            mva:
+              type: number
+            oi:
+              type: number
+            sales:
+              type: number
+            prod:
+              type: number
+            stock:
+              type: number
+        kpi_trend:
+          type: object
+          properties:
+            date:
+              type: array
+              items:
+                type: string
+                format: date
+              description: |
+                x lables for line chart
+            sales:
+              type: array
+              items:
+                type: integer
+            prod:
+              type: array
+              items:
+                type: integer
+            stock:
+              type: array
+              items:
+                type: number
+                
+    Health:
+      type: object
+      properties:
+        phase_dist:
+          type: object
+          properties:
+            mp:
+              type: integer
+            rfq:
+              type: integer
+            npi:
+              type: integer
+        mp_status:
+          type: object
+          properties:
+            above:
+              $ref: '#/components/schemas/MpItem'
+            below:
+              $ref: '#/components/schemas/MpItem'
+            loss:
+              $ref: '#/components/schemas/MpItem'
+            total:
+              $ref: '#/components/schemas/MpItem'
+        prj_score:
+          type: object
+          properties:
+            __ForEachKpi__:
+              $ref: '#/components/schemas/ProjItem'
+    MpItem:
+      type: object
+      properties:
+        count:
+          type: integer
+        rev:
+          type: number
+        oi:
+          type: number
+    ProjItem:
+      type: object
+      properties:
+        prj_list:
+          description: |
+            x label of project health bar chart
+          type: array
+          items:
+           type: string
+           description: prject name
+        actual:
+          type: array
+          items:
+            type: number
+        ltm:
+          type: array
+          items:
+            type: number
+        r3m:
+          type: array
+          items:
+            type: number
+        quote:
+          type: array
+          items: 
+            type: number
+          
+    Fulfillment:
+      type: object
+      properties:
+        bench_marks:
+          type: object
+          properties:
+            safe_stock:
+              type: number
+            apr:
+              type: number
+        fulfillment_values:
+          type: object
+          properties:
+           __ForEachPrj__:
+            $ref: '#/components/schemas/FulfillmentValueItem'
+        fulfillment_trend:
+          type: object
+          properties:
+            __ForEachPrj__:
+              $ref: '#/components/schemas/FulfillmentTrendItem'
+    FulfillmentValueItem:
+      type: object
+      properties:
+        shipment:
+          type: integer
+        gap:
+          type: integer
+        production:
+          type: integer
+        inventory:
+          type: integer
+    FulfillmentTrendItem:
+      type: object
+      properties:
+        date:
+          type: array
+          items:
+            type: string
+            format: date
+        production:
+          type: array
+          items:
+            type: integer
+        shipment:
+          type: array
+          items:
+            type: integer
+        stock:
+          type: array
+          items:
+            type: integer
+            
+    MOH:
+      type: object
+      properties:
+        quote:
+          type: number
+        unit_moh_data:
+          type: object
+          properties:
+            actual:
+              $ref: '#/components/schemas/MohItem'
+            __ForEachMonth__:
+              $ref: '#/components/schemas/MohItem'
+        base_curve_param:
+          type: object
+          description: |
+            TBD!
+    MohItem:
+      type: object
+      properties:
+        qty:
+          type: integer
+        __ForEachMohType__:
+            type: number
+            description: |
+              Enum for MohType [ DL, Utilities, Prod Consume, IDL, Depreciation, Facilities, Other Utilities ]
+            
+    MUV:
+      type: object
+      properties:
+        muv_trend:
+          type: object
+          properties:
+            unit:
+              $ref: '#/components/schemas/MuvTrendItem'
+            total:
+              $ref: '#/components/schemas/MuvTrendItem'
+        muv_table:
+          type: object
+          properties:
+            __ForEachPrj__:
+              $ref: '#/components/schemas/MuvTableItem'
+    MuvTrendItem:
+      type: object
+      properties:
+        date: 
+          type: array
+          description: |
+            x label for muv trend chart
+          items:
+            type: string
+            format: date
+        __ForEachPrj__:
+          type: array
+          items:
+            type: number
+    MuvTableItem:
+      type: object
+      properties:
+        detail:
+          type: object
+          properties:
+            CG:
+              type: number
+            HSG:
+              type: number
+            BTY:
+              type: number
+            HotBar:
+              type: number
+        sumup:
+          type: object
+          properties:
+            unit_opportunity:
+              type: number
+            sales_volume:
+              type: integer
+            opportunity:
+              type: number
+            perct_of_total:
+              type: number

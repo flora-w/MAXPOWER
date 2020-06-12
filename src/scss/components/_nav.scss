@@ -1,0 +1,197 @@
+.Nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 990;
+  background-color: #303A40;
+  height: 100%;
+  width: 60px;
+
+  .avatar-out-box {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    height: 60px;
+    width: 60px;
+    display: table;
+    font-size: 30px;
+    color: #5D6D78;
+    text-align: center;
+  }
+
+  .avatar-out-box:hover {
+    color: #1BB9B9;
+  }
+
+  .profile {
+    font-size: 32px;
+  }
+
+  span {
+    color: #C8C8C8;
+  }
+
+  .nav-out-box {
+    height: 60px;
+    width: 60px;
+    border-left: 3px solid transparent;
+    font-size: 24px;
+    color: #5D6D78;
+    position: relative;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .nav-out-box:hover {
+    border-left-color: #1BB9B9;
+    //color: #1BB9B9;
+    background-color: #262C30;
+  }
+
+  .nav-second-box {
+    position: fixed;
+    left: 60px;
+    top: 240px;
+    z-index: 990;
+    background-color: #262C30;
+    width: 240px;
+    padding: 10px 0;
+    display: none;
+    text-align: left;
+  }
+
+  .icon {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    background: no-repeat center center;
+    background-size: contain;
+    vertical-align: middle;
+
+    &.po {
+      background-image: url("../static/icons/icon_po.svg");
+    }
+
+    &.kpi {
+      background-image: url("../static/icons/icon_kpi.svg");
+    }
+
+    &.health {
+      background-image: url("../static/icons/icon_health.svg");
+    }
+
+    &.fulfillment {
+      background-image: url("../static/icons/icon_fulfillment.svg");
+    }
+
+    &.costX {
+      background-image: url("../static/icons/icon_costX.svg");
+    }
+
+    &.cost {
+      background-image: url("../static/icons/icon_cost.svg");
+    }
+
+    &.muv {
+      background-image: url("../static/icons/icon_muv.svg");
+    }
+
+    &.moh {
+      background-image: url("../static/icons/icon_moh.svg");
+    }
+
+    &.rubix {
+      background-image: url("../static/icons/icon_rubix.svg");
+    }
+
+    &.brain {
+      background-image: url("../static/icons/icon_brain.svg");
+    }
+
+    &.tracker {
+      background-image: url("../static/icons/icon_tracker.svg");
+    }
+    //&.rm {
+    //  background-image: url("../../asset/icons/icon_rm.png");
+    //}
+    //
+    //&.point {
+    //  background-image: url("../../asset/icons/icon_point.png");
+    //}
+    //
+    //&.react {
+    //  background-image: url("../../asset/icons/icon_react.png");
+    //}
+    //
+    //&.trans {
+    //  background-image: url("../../asset/icons/old_imp.png");
+    //}
+    //
+    //&.level {
+    //  background-image: url("../../asset/icons/new_imp.png");
+    //}
+    //
+    //&.jour {
+    //  background-image: url("../../asset/icons/chu_pre.png");
+    //}
+  }
+
+  .nav-out-box:hover {
+    cursor: pointer;
+
+    .nav-second-box {
+      display: block;
+    }
+
+    .icon {
+
+      &.po {
+        background-image: url("../static/icons/icon_po2.svg");
+      }
+
+      &.costX {
+        background-image: url("../static/icons/icon_costX2.svg");
+      }
+
+      &.rubix {
+        background-image: url("../static/icons/icon_rubix2.svg");
+      }
+
+      &.brain {
+        background-image: url("../static/icons/icon_brain2.svg");
+      }
+
+      &.tracker {
+        background-image: url("../static/icons/icon_tracker2.svg");
+      }
+    }
+  }
+
+  .nav-second-box {
+    position: absolute;
+    left: 57px;
+    top: 0;
+    z-index: 990;
+    background-color: #262C30;
+    min-width: 290px;
+    padding: 10px 0;
+    display: none;
+  }
+
+  .nav-second-item {
+    padding: 5px 20px;
+    font-size: 14px;
+
+    a {
+      display: inline-block;
+      line-height: 40px;
+      color: #eee;
+      text-decoration: none;
+    }
+  }
+
+  .nav-text-box {
+    color: #6E8591;
+    vertical-align: middle;
+    padding-left: 10px;
+  }
+}

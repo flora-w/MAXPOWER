@@ -1,0 +1,25 @@
+.finance-pl-overview-table-container {
+  margin-bottom: 30px;
+
+  .ant-table {
+    overflow-x: auto;
+  }
+
+  .ant-table-tbody > tr > td:first-child {
+    min-width: 240px;
+    width: 240px;
+  }
+}
+
+.finance-pl-comparison-table-container {
+  margin-bottom: 30px;
+
+  .ant-table {
+    overflow-x: auto;
+  }
+
+  .ant-table-tbody > tr > td:first-child {
+    min-width: 240px;
+    width: 240px;
+  }
+}

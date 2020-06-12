@@ -1,0 +1,26 @@
+
+<svg width="30px" height="28px" viewBox="0 0 30 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#13E0FF" offset="0%"></stop>
+            <stop stop-color="#069CD2" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="33.5346545%" x2="-17.1213054%" y2="66.3787832%" id="linearGradient-2">
+            <stop stop-color="#5AE4E4" offset="0%"></stop>
+            <stop stop-color="#93F3F4" stop-opacity="0.75" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="left_Navi" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="left-Navi-new复制" transform="translate(-17.000000, -22.000000)">
+            <g id="left-Navi-new-Copy">
+                <g id="Rectangle-Copy" transform="translate(1.000000, 0.000000)">
+                    <g id="logo" transform="translate(16.000000, 22.000000)">
+                        <path d="M10.9999,16.2469331 L15.3919,22.5195 L15.4999,22.4438736 L15.4999,28 L10.9999,28 L10.9999,16.2469331 Z M15.5,4 L15.5,0 L28.5,0 L28.5,4 L15.5,4 Z M10.9999,5e-05 L15.4999,5e-05 L15.4999,13.57155 L12.7834,9.69155 L10.9999,7.14505 L10.9999,5e-05 Z" id="形状结合" fill="url(#linearGradient-1)"></path>
+                        <polygon id="Fill-5" fill="url(#linearGradient-2)" points="16.2514 17.645 10.7759 9.825 -0.0001 20.943 9.9164 14.6995 15.3919 22.5195 27.947998 14.1365967 25.5484619 10.7374268"></polygon>
+                        <path d="M28.5012762,15 L29.4634336,10.5693042 L25,10 L28.5012762,15 Z" id="Fill-2" fill="#7FFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

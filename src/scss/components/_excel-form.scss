@@ -1,0 +1,21 @@
+.excel-form-container {
+  width: 500px;
+  min-height: 100px;
+  color: rgba(0, 0, 0, 0.87);
+
+  .jexcel > thead > tr > td {
+    z-index: 1;
+  }
+
+  .jexcel > tbody > tr > td {
+    font-size: 14px;
+  }
+
+  .jexcel_textarea {
+    display: none;
+  }
+
+  .jexcel_about {
+    display: none;
+  }
+}

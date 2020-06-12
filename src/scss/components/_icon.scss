@@ -1,0 +1,351 @@
+@for $i from 1 through 20 {
+  .icon-#{$i}x {
+    height: #{10 + $i*2}px;
+    width:  #{10 + $i*2}px;
+
+    display: inline-block;
+    background: no-repeat center center;
+    background-size: contain;
+    vertical-align: middle;
+
+    &.gap {
+      background-image: url("/icons/icon_gap.png");
+    }
+
+    &.budget {
+      background-image: url("/icons/icon_budget.png");
+    }
+
+    &.actual {
+      background-image: url("/icons/icon_actual.png");
+    }
+
+    &.download {
+      background-image: url("/icons/icon_download.png");
+    }
+
+    &.clock {
+      background-image: url("/icons/icon_clock.png");
+    }
+
+    &.more {
+      background-image: url("/icons/icon_more.png");
+    }
+
+    &.table {
+      background-image: url("/icons/icon_table.png");
+    }
+
+    &.like {
+      background-image: url("/icons/icon_like.png");
+      &.checked {
+        background-image: url("/icons/icon_like_color.png");
+      }
+    }
+
+    &.dislike {
+      background-image: url("/icons/icon_dislike.png");
+      &.checked {
+        background-image: url("/icons/icon_dislike_color.png");
+      }
+    }
+
+    &.desc {
+      background-image: url("/icons/icon_desc.png");
+    }
+
+    &.hint {
+      background-image: url("/icons/icon_hint.png");
+    }
+
+    &.accessory {
+      background-image: url("/icons/icon_accessory.png");
+    }
+
+    &.phone {
+      background-image: url("/icons/icon_phone.png");
+    }
+    &.openline {
+      background-image: url("/icons/icon_openline.png");
+    }
+    &.manpower {
+      background-image: url("/icons/icon_manpower.png");
+    }
+    &.atten {
+      background-image: url("/icons/icon_atten.png");
+    }
+    &.unatten {
+      background-image: url("/icons/icon_unatten.png");
+    }
+    &.resign {
+      background-image: url("/icons/icon_resign.png");
+    }
+    &.recruit {
+      background-image: url("/icons/icon_recruit.png");
+    }
+    .station {
+      background-image: url("/icons/icon_setting.png");
+    }
+    &.flip {
+      background-image: url("/icons/icon_flip.png");
+    }
+
+    &.perf {
+      background-image: url("/icons/icon_perf.png");
+
+      &.active {
+        background-image: url("/icons/icon_perf_color.png");
+      }
+    }
+
+    &.cost {
+      background-image: url("/icons/icon_cost.png");
+
+      &.active {
+        background-image: url("/icons/icon_cost_color.png");
+      }
+    }
+
+    &.pie {
+      background-image: url("/icons/pie.png");
+
+      &.active {
+        background-image: url("/icons/pie-active.png");
+      }
+    }
+
+    &.finance-pl {
+      background-image: url("/icons/icon_rubix.png");
+
+      &.active {
+        background-image: url("/icons/icon_rubix_color.png");
+      }
+    }
+
+    &.brain {
+      background-image: url("/icons/icon_brain.png");
+
+      &.active {
+        background-image: url("/icons/icon_brain_color.png");
+      }
+    }
+
+    &.tracker {
+      background-image: url("/icons/icon_tracker.png");
+
+      &.active {
+        background-image: url("/icons/icon_tracker_color.png");
+      }
+    }
+
+    &.dna {
+      background-image: url("/icons/icon_dna.png");
+    }
+
+    &.rfq {
+      background-image: url("/icons/icon_rfq.png");
+    }
+
+    &.struct {
+      background-image: url("/icons/icon_struct.png");
+    }
+
+    &.excel {
+      background-image: url("/icons/file-excel.png");
+
+      &.active {
+        background-image: url("/icons/file-excel-active.png");
+      }
+    }
+
+    &.visitor-log {
+      background-image: url("/icons/visitor-log.png");
+
+      &.active {
+        background-image: url("/icons/visitor-log-active.png");
+      }
+    }
+
+    &.phone {
+      background-image: url("/icons/icon_phone.png");
+
+      &.active {
+        background-image: url("/icons/icon_phone_active.png");
+      }
+    }
+
+    &.openline {
+      background-image: url("/icons/icon_openline.png");
+
+      &.active {
+        background-image: url("/icons/icon_openline_active.png");
+      }
+    }
+    &.manpower {
+      background-image: url("/icons/icon_manpower.png");
+      &.active {
+        background-image: url("/icons/icon_manpower_active.png");
+      }
+    }
+    &.atten {
+      background-image: url("/icons/icon_atten.png");
+      &.active {
+        background-image: url("/icons/icon_atten_active.png");
+      }
+    }
+    &.unatten {
+      background-image: url("/icons/icon_unatten.png");
+      &.active {
+        background-image: url("/icons/icon_unatten_active.png");
+      }
+    }
+    &.resign {
+      background-image: url("/icons/icon_resign.png");
+      &.active {
+        background-image: url("/icons/icon_resign_active.png");
+      }
+    }
+    &.recruit {
+      background-image: url("/icons/icon_recruit.png");
+      &.active {
+        background-image: url("/icons/icon_recruit_active.png");
+      }
+    }
+    &.station {
+      background-image: url("/icons/icon_setting.png");
+      &.active {
+        background-image: url("/icons/icon_setting_active.png");
+      }
+    }
+    &.triangle-yellow {
+      background-image: url("/icons/icon_triangle_yellow.png");
+    }
+
+    &.triangle-blue {
+      background-image: url("/icons/icon_triangle_blue.png");
+    }
+
+    &.close {
+      background-image: url("/icons/icon_close.png");
+    }
+
+    &.check {
+      background-image: url("/icons/icon_check.png");
+    }
+
+    &.hint {
+      background-image: url("/icons/icon_hint.png");
+    }
+
+    &.users {
+      background-image: url("/icons/icon_users.png");
+    }
+
+    &.cases {
+      background-image: url("/icons/icon_cases.png");
+    }
+
+    &.bran {
+      background-image: url("/icons/icon_bran.png");
+    }
+
+    &.succ {
+      background-image: url("/icons/icon_succ.png");
+    }
+
+    &.exec {
+      background-image: url("/icons/icon_exec.png");
+    }
+
+    &.arch {
+      background-image: url("/icons/icon_arch.png");
+    }
+
+    &.cycle {
+      background-image: url("/icons/icon_cycle.png");
+    }
+
+    &.scv {
+      background-image: url("/icons/icon_scv.png");
+    }
+
+    &.wmp {
+      background-image: url("/icons/icon_wmp.png");
+    }
+
+    &.up{
+      background-image: url("/icons/icon_arrow_rise_green.png");
+      &.gap{
+        background-image: url("/icons/icon_arrow_rise_orange.png");
+      }
+      &.moh{
+        background-image: url("/icons/icon_arrow_rise_orange.png");
+      }
+      &.ads{
+        background-image: url("/icons/icon_arrow_rise_orange.png");
+      }
+      &.cost_var{
+        background-image: url("/icons/icon_arrow_rise_orange.png");
+      }
+      &.total_cost_gap{
+        background-image: url("/icons/icon_arrow_rise_orange.png");
+      }
+      &.non_adj_cost_gao{
+        background-image: url("/icons/icon_arrow_rise_orange.png");
+      }
+      &.mat_cost_gap{
+        background-image: url("/icons/icon_arrow_rise_orange.png");
+      }
+      &.moh_cost_gap{
+        background-image: url("/icons/icon_arrow_rise_orange.png");
+      }
+      &.other_cost_gap{
+        background-image: url("/icons/icon_arrow_rise_orange.png");
+      }
+      &.opex_cost_gap{
+        background-image: url("/icons/icon_arrow_rise_orange.png");
+      }
+    }
+
+    &.down{
+      background-image: url("/icons/icon_arrow_down_green.png");
+      &.gap{
+        background-image: url("/icons/icon_arrow_down_green.png");
+      }
+      &.ship{
+        background-image: url("/icons/icon_arrow_down_orange.png");
+      }
+      &.prod{
+        background-image: url("/icons/icon_arrow_down_orange.png");
+      }
+      &.yield{
+        background-image: url("/icons/icon_arrow_down_orange.png");
+      }
+    }
+
+    &.decrease{
+      background-image: url("/icons/icon_decrease.png");
+    }
+
+    &.increase{
+      background-image: url("/icons/icon_increase.png");
+    }
+
+    &.triangle-green{
+      background-image: url("/icons/icon_triangle_green.png");
+    }
+
+    &.clicked{
+      background-image: url("/icons/icon_clicked.png");
+    }
+
+    &.divider{
+      background-image: url("/icons/icon_divider.png");
+    }
+
+    &.description{
+      background-image: url("/icons/icon_description.png");
+    }
+
+  }
+}

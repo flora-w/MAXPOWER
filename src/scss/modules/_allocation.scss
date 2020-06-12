@@ -1,0 +1,143 @@
+.allocation-controller {
+  padding: $half-space 0;
+  text-align: center;
+  color: $color-text-dark;
+  border: 1px solid $color-border;
+  border-radius: 4px;
+  width: 100%;
+
+  div {
+    height: 1.5em;
+    width: 100%;
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &.selected {
+    background-color: $color-success;
+    color: $color-text;
+  }
+}
+
+.allocation-statement {
+  background-color: $color-background-light;
+  border-radius: 6px;
+  min-height: 56vh;
+
+  .ant-tabs-tab-disabled {
+    cursor: auto !important;
+  }
+}
+
+.allocation-model-detail {
+  padding: 0 $dbl-space;
+  margin: 0 $dbl-space;
+}
+
+.allocation-tabs-header {
+  padding: $half-space $base-space 0;
+  color: $color-text;
+}
+
+.allocation-tabs-tab {
+  border: 1px solid $color-border-light;
+  border-radius: 4px;
+  color: $color-text;
+  padding: $half-space $base-space;
+}
+
+.allocation-tabs-desc {
+  color: $color-text;
+  text-align: left;
+  border-right: 1px solid $color-border-light;
+}
+
+.allocation-tabs-rule {
+  text-align: left;
+  margin-top: $half-space;
+  color: $color-text-dark;
+}
+
+.allocation-chart-option {
+  text-align: right;
+  margin: 0 0 $base-space;
+}
+
+.allocation-report-echart-container {
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  margin: $base-space 0 0;
+}
+
+.allocation-preview-summery {
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  padding: $base-space;
+  text-align: center;
+  color: $color-text-dark;
+}
+
+.moh-allocation {
+  .ant-checkbox-group {
+    width: 100%
+  }
+
+  .ant-checkbox-wrapper {
+    width: 100%
+  }
+
+  .ant-checkbox-wrapper > span {
+    display: inline-block;
+  }
+
+  .allocation-checkbox-container {
+    color: $color-text;
+    border: 1px solid $color-border;
+    border-radius: 6px;
+    padding: $half-space $base-space;
+    margin: $half-space;
+
+    &.selected {
+      background-color: $color-background-highlight;
+    }
+
+    :hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.allocation-preview-summery > .ant-statistic >.ant-statistic-content {
+  padding: 0;
+}
+
+.moh-allocation-checkbox-container {
+  padding: $base-space $base-space 0 0;
+  height: 55vh;
+  overflow-y: scroll;
+}
+
+.alert-row {
+  display: flex;
+  margin: 6px;
+
+  .image-container {
+    display: flex;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+
+    .warning-icon {
+      height: 18px;
+    }
+  }
+
+  .text-container {
+    width: 90%;
+  }
+}

@@ -1,0 +1,1 @@
+export const MANUAL_RULE_ID = 4;

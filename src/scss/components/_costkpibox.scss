@@ -1,0 +1,83 @@
+.kpibox {
+  padding: $half-space $half-space $half-space $base-space;
+  opacity: 0.8;
+  border-radius: 8px;
+  background-color: #2D3439;
+  height: 165px;
+  margin-right: 20px;
+  margin-top:30px;
+
+  &.total_cost_gap {
+    border-top: 3px solid #367BFF;
+  }
+
+  &.non_adj_cost_gao {
+    border-top: 3px solid #45AFFF;
+  }
+
+  &.mat_cost_gap {
+    border-top: 3px solid #1BB9B9;
+  }
+
+  &.moh_cost_gap {
+    border-top: 3px solid #67B26E;
+  }
+
+  &.other_cost_gap {
+    border-top: 3px solid #ED994F;
+  }
+
+  &.opex_cost_gap {
+    border-top: 3px solid #BBA85A;
+  }
+
+  .performance-KpiBox-front {
+    height:160px
+  }
+
+  .performance-KpiBox-title {
+    font-size: 16px;
+    letter-spacing: 0;
+  }
+
+  .base-margin-bottom{
+    position: absolute;
+    top:65px;
+    display: -webkit-box;
+  }
+
+  .performance-KpiBox-kpi{
+    font-size: 28px;
+    letter-spacing: 0;
+  }
+
+  .unit{
+    font-size:14px;
+    color: #839CAB;
+    top:15px;
+    margin-left: 10px;
+    position:absolute;
+  }
+  .icon-4x{
+    position: absolute;
+    top:15px;
+    margin-left: 40px;
+    //display:flex;
+  }
+
+
+  .performance-KpiBox-secondLine{
+    font-size: 14px;
+    color: #F8F8F8;
+    position: absolute;
+    top:110px
+  }
+
+  .performance-KpiBox-summary{
+    font-size: 14px;
+    color: #839CAB;
+    position: absolute;
+    bottom: 10px;
+  }
+
+}

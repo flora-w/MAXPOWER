@@ -1,0 +1,21 @@
+.ant-modal-content {
+  background-color: $color-background-light;
+  padding: 0 $base-space $base-space;
+  color: $color-text;
+}
+
+.ant-modal-close-x > i {
+  color: $color-text-dark;
+}
+
+.ant-modal-footer {
+  border: none;
+}
+
+.ant-modal-confirm-body .ant-modal-confirm-title {
+  color: white;
+}
+
+.ant-modal-confirm-body .ant-modal-confirm-content {
+  color: $color-second-text;
+}

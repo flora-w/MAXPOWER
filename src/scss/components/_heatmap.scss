@@ -1,0 +1,5 @@
+.heatmap-table-container {
+  .ant-table-thead > tr:first-child > th:first-child, .ant-table-tbody > tr > td:first-child {
+    white-space: nowrap;
+  }
+}

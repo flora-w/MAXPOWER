@@ -1,0 +1,37 @@
+.ant-page-header {
+  background-color: $color-background-light !important;
+  margin-bottom: $base-space;
+  min-width: 1080px;
+  height: 40px;
+}
+
+.ant-page-header-footer {
+  color: $color-text-dark;
+  padding: $half-space 0;
+}
+
+.ant-page-header-heading-title {
+  color: $color-text;
+  padding: 0 0 $base-space;
+}
+
+.ant-page-header-title-view-sub-title {
+  color: $color-text-dark;
+}
+
+.ant-page-header-heading {
+  width: 100%;
+}
+
+.ant-page-header-heading-sub-title {
+  float: right;
+  padding: 0;
+}
+
+.ant-page-header-footer {
+  padding: $half-space;
+}
+
+.ant-layout-header {
+  line-height: 80px;
+}

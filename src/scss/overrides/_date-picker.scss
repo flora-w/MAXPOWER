@@ -1,0 +1,47 @@
+.ant-calendar-picker-input {
+  max-width: 144px;
+}
+
+.ant-calendar, .ant-calendar-range {
+  border: 1px solid $color-border;
+  border-radius: 6px;
+}
+
+.ant-calendar-picker-container, .ant-calendar-month-panel-body, .ant-calendar-month-panel-header, .ant-calendar-input-wrap {
+  background-color: $color-background-highlight;
+  border: 1px solid $color-border;
+}
+
+.ant-calendar-month-panel-month {
+  color: $color-text;
+}
+
+.ant-calendar-range .ant-calendar-input, .ant-calendar-range .ant-calendar-time-picker-input {
+  background-color: $color-background-highlight;
+}
+
+.ant-calendar-month-panel-cell-disabled {
+  .ant-calendar-month-panel-month{
+    background-color: $color-background-light;
+    color: $color-text-dark;
+  }
+}
+
+.ant-calendar-month-panel-selected-cell {
+  .ant-calendar-month-panel-month{
+    background-color: $color-success;
+    color: $color-text;
+  }
+}
+
+.ant-calendar-month-panel-header {
+  .ant-calendar-month-panel-prev-year-btn, .ant-calendar-month-panel-next-year-btn, .ant-calendar-month-panel-year-select-content {
+    color: $color-text;
+  }
+
+  border-bottom: 1px solid $color-border;
+}
+
+.ant-calendar-picker-icon {
+  color: $color-text-dark;
+}

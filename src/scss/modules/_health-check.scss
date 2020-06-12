@@ -1,0 +1,92 @@
+.highlightBox{
+  top:40px;
+  position: absolute;
+  height:300px;
+  width:100%;
+  display: -webkit-box;
+
+  .notHighlight{
+    background:none ! important;
+  }
+  .ant-col{
+    //width:11.1%;
+    background-image: url("/icons/icon_barselect.png");
+    opacity: 0.5;
+    position: relative;
+    z-index: 4;
+    height:100%;
+    background-size: 100% 100%;
+  }
+
+}
+
+//project health bubble line description
+.icon-4x.description{
+    position: relative;
+    top: 37px;
+}
+
+.project-health-desc{
+  position: absolute;
+  top:15px;
+  left:155px;
+  background-image: url("/images/project_health_desc.png");
+  height:132px;
+  width:530px;
+  background-size: 100% 100%;
+  z-index: 2;
+  padding: 14px 12px 14px 28px;
+  color: #FFFFFF;
+}
+
+
+.title{
+  margin-bottom: 37px;
+  margin-top:37px;
+  height:24px;
+}
+
+.divider{
+  height:120px;
+  position: absolute;
+  //top:200px;
+
+}
+.deepDiveBox{
+  margin-top: 37px;
+  padding-left:15px
+}
+
+.barSelector{
+  display: flex;
+
+  .ant-btn {
+    text-align: center;
+    //width:145px;
+    background: #2D3439;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #879CAB;
+    letter-spacing: 0;
+    border:none
+  }
+
+  .buttonGroup:last-child{
+    display: grid;
+    width:16.6%;
+    margin-right: 0px;
+  }
+
+  .buttonGroup{
+    display: grid;
+    width:16.6%;
+    margin-right: 20px;
+  }
+
+  .clicked{
+    border: 1px solid #1BB9B9;
+    color: #FFFFFF;
+    //background-image: url("/icons/icon_clicked.png");
+  }
+
+}

@@ -1,0 +1,84 @@
+@import "./variables";
+@import "./mixins";
+
+@import "./components/icon";
+@import "./components/text";
+@import "./components/tile";
+@import "./components/login";
+@import "./components/insight";
+@import "./components/typography";
+@import "./components/sidebar";
+@import "./components/page-header";
+@import "./components/healthKpiBox";
+@import "./components/sortedTable";
+@import "./components/costkpibox";
+@import "./components/heatmap";
+@import "./components/trend-analysis";
+@import "./components/unauthorized";
+@import "./components/excel-form";
+
+@import "./overrides/card";
+@import "./overrides/tabs";
+@import "./overrides/menu";
+@import "./overrides/spin";
+@import "./overrides/input";
+@import "./overrides/sider";
+@import "./overrides/table";
+@import "./overrides/badge";
+@import "./overrides/modal";
+@import "./overrides/switch";
+@import "./overrides/button";
+@import "./overrides/select";
+@import "./overrides/checkbox";
+@import "./overrides/statistic";
+@import "./overrides/page-header";
+@import "./overrides/date-picker";
+@import "./overrides/radio";
+
+@import "./modules/performance";
+@import "./modules/health-check";
+@import "./modules/allocation";
+@import "./modules/cost-overview";
+@import "./modules/reporting-summary";
+@import "./modules/finance-pl";
+
+body {
+  font-size: 14px;
+  color: $color-text;
+  font-family: "PingFangSC-Light", 'HelveticaNeue-Light', "Microsoft YaHei UI", "Microsoft YaHei", "sans-serif";
+  background-color: $color-background !important;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.app-layout {
+  min-height: 100vh;
+}
+
+.app-sider {
+  border-right: 2px $color-border solid;
+  background-color: $color-background-highlight;
+}
+
+.app-body {
+  background-color: $color-background;
+  min-width: 1080px;
+  overflow-y: hidden;
+}
+
+.spinner {
+  position: fixed;
+  display: flex;
+  z-index: 9999;
+  width: 100%;
+  height: 100vh;
+  padding-top: 20vh;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.32);
+
+  &.closed {
+    z-index: -1;
+  }
+}

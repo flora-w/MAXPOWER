@@ -1,0 +1,48 @@
+@for $i from 10 through 32 {
+  .font-#{$i} {
+    font-size: #{$i}px;
+  }
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-strong {
+  font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color-text;
+}
+
+.title {
+  color: $color-text;
+  font-size: 16px;
+  border-left: 2px solid $color-success;
+  padding: 0 $half-space;
+  margin: $dbl-space 0 $base-space $half-space;
+}
+
+.title-desc {
+  color: $color-text-dark;
+  font-size: 14px;
+  margin-left: $base-space;
+}
+
+.subtitle{
+  font-size: 16px;
+}
+
+.text-desc {
+  color: $color-text-dark;
+  font-size: 14px;
+}

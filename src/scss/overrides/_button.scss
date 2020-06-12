@@ -1,0 +1,33 @@
+.ant-btn {
+  background-color: $color-background-button;
+  color: $color-text;
+  border: none;
+}
+
+.ant-btn:hover {
+  background: $color-background-button;
+}
+
+.ant-btn-primary {
+  background-color: $color-success;
+}
+
+.ant-radio-group {
+  width:100%;
+  
+  :hover {
+    color: $color-text;
+    width: 50%;
+  }
+}
+
+.ant-radio-button-wrapper {
+  background-color: $color-background-light;
+  color: $color-text;
+  width: 50%;
+  text-align: center;
+
+  :hover {
+    color: $color-text;
+  }
+}

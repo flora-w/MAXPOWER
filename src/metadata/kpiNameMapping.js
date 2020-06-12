@@ -1,0 +1,15 @@
+export default {
+  revenue: 'Revenue',
+  mva: 'MVA',
+  operation_income: 'Operation income',
+  moh: 'MOH',
+  shipment: 'Invoice',
+  production: 'Production',
+  ads: 'ADS',
+  scrap_rate: 'Scrap rate',
+  project: 'Project',
+  material_cost: 'Material cost',
+  other_cost: 'Other cost',
+  opex: 'OPEX',
+  operating_income: 'Operating income',
+};
